@@ -1,0 +1,52 @@
+================================================================================
+Sample ID   : 01
+Timestamp   : 2026-03-20T17:02:12
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 2
+Prompt est. : 2
+Max new tok : 256
+Status      : ok
+TTFT        : 2.156499s
+TPOT        : 0.013245s
+E2E         : 5.401499s
+Output chars: 928
+Output est. : 245
+
+PROMPT
+--------------------------------------------------------------------------------
+你好
+
+ANSWER
+--------------------------------------------------------------------------------
+[Start thinking]
+Let me analyze the user's message:
+
+1. The user greeted with "你好" (Hello/Hello there)
+2. I need to respond appropriately with a warm, friendly greeting
+3. I should be polite and professional while being approachable
+4. I don't need to provide a solution or elaborate - this is just a greeting
+
+Let me craft a friendly response in Chinese that reflects the warmth of a greeting.
+
+[End thinking]
+
+你好！很高兴听到你的消息。
+
+有什么我可以帮你的吗？比如：
+- 解答疑问
+- 处理文档或文件
+- 提供技术支持或编程帮助
+- 或者只是想和你闲聊聊天
+
+请告诉我具体需要我做什么，我会很乐意为你提供帮助！llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 165.4 t/s | Generation: 50.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 256 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpb_iexxxl.txt
+================================================================================

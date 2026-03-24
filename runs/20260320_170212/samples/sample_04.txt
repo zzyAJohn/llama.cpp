@@ -1,0 +1,56 @@
+================================================================================
+Sample ID   : 04
+Timestamp   : 2026-03-20T17:02:32
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 23
+Prompt est. : 23
+Max new tok : 256
+Status      : ok
+TTFT        : 2.195002s
+TPOT        : 0.012786s
+E2E         : 7.718500s
+Output chars: 914
+Output est. : 432
+
+PROMPT
+--------------------------------------------------------------------------------
+请详细解释深度学习的原理，并举例说明其应用场景
+
+ANSWER
+--------------------------------------------------------------------------------
+[Start thinking]
+用户要求详细解释深度学习的原理，并举例说明其应用场景。这是一个需要系统讲解的问题。
+
+## 深度学习原理解析
+
+深度学习是人工智能领域的一个重要分支，主要基于神经网络（Neural Network）的架构来学习。让我系统地解释其原理：
+
+1. **核心架构**：
+   - 神经网络的基本组成：输入层、隐藏层、输出层
+   - 每一层都是可学习的函数
+
+2. **核心概念**：
+   - 特征表示：神经网络能学习到数据中的抽象特征
+   - 梯度下降（Gradient Descent）：更新参数以最小化损失函数
+   - 反向传播（Backward Pass）：根据损失计算梯度并反向传播
+
+3. **关键机制**：
+   - 反向传播机制：输出层的梯度通过反向传播机制传递到前一层，更新权重参数
+   - 激活函数：Sigmoid、ReLU等激活函数增加模型表达能力
+   - 损失函数：定义优化目标，如交叉熵、均方误差
+
+4. **关键算法**：
+   - 前向传播：输入数据，计算输出
+   - 反向传播：计算梯度，更新权重
+   - 梯度下降：根据梯度llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 263.2 t/s | Generation: 49.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 256 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp3bp7d4st.txt
+================================================================================

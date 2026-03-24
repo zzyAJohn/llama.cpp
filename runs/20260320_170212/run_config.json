@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-03-20T17:02:12",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python": "3.9.19 (main, May  6 2024, 20:12:36) [MSC v.1916 64 bit (AMD64)]",
+  "exe_path": "build\\bin\\Release\\local_llm.exe",
+  "model_path": "models\\Qwen3.5-0.8B.Q4_K_M.gguf",
+  "max_new_tokens": 256,
+  "prompt_count": 10,
+  "output_dir": "runs\\20260320_170212"
+}

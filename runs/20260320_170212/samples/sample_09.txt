@@ -1,0 +1,64 @@
+================================================================================
+Sample ID   : 09
+Timestamp   : 2026-03-20T17:03:10
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 11
+Prompt est. : 11
+Max new tok : 256
+Status      : ok
+TTFT        : 2.403500s
+TPOT        : 0.011634s
+E2E         : 7.685500s
+Output chars: 933
+Output est. : 454
+
+PROMPT
+--------------------------------------------------------------------------------
+讲解C++中的智能指针
+
+ANSWER
+--------------------------------------------------------------------------------
+[Start thinking]
+用户想要了解C++中的智能指针。这是一个常见且重要的概念，我需要提供一个清晰、全面且易懂的解释。
+
+让我组织一下回答的结构：
+
+1. 什么是智能指针
+2. 为什么要使用智能指针
+3. 智能指针的主要类型（std::unique_ptr, std::shared_ptr）
+4. 不同类型指针的区别（所有权、释放方式、引用计数）
+5. 智能指针的使用方法
+6. 使用智能指针的陷阱
+7. 最佳实践
+
+让我详细解释这些内容。
+
+[End thinking]
+
+# C++ 中的智能指针详解
+
+## 1. 什么是智能指针
+
+智能指针（Smart Pointer）是一种指针类型，它由标准库提供，用于自动管理内存分配，避免手动释放可能导致的数据泄漏和内存泄露。
+
+## 2. 为什么要使用智能指针？
+
+1. **防止内存泄漏** - 手动释放可能导致内存未释放
+2. **防止数据泄露** - 对象在生命周期结束后仍被其他引用
+3. **简化代码** - 无需手动调用 `delete` 或 `delete[]`
+4. **避免引用计数陷阱** - 避免引用计数不足的情况
+
+## 3. 智能指针的主要类型
+
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 212.9 t/s | Generation: 51.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 256 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpjqddyofc.txt
+================================================================================

@@ -283,3 +283,7 @@ configure_file(cmake/llama.pc.in
 
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/llama.pc"
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+
+if (TARGET llama-cli)
+    set_target_properties(llama-cli PROPERTIES OUTPUT_NAME local_llm)
+endif()

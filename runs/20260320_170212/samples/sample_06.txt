@@ -1,0 +1,73 @@
+================================================================================
+Sample ID   : 06
+Timestamp   : 2026-03-20T17:02:47
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 21
+Prompt est. : 11
+Max new tok : 256
+Status      : ok
+TTFT        : 2.226999s
+TPOT        : 0.012345s
+E2E         : 7.399499s
+Output chars: 967
+Output est. : 419
+
+PROMPT
+--------------------------------------------------------------------------------
+解释Transformer模型的结构和原理
+
+ANSWER
+--------------------------------------------------------------------------------
+[Start thinking]
+用户想要了解 Transformer 模型的详细结构原理。这是一个深度学习领域的问题，我需要系统地解释：
+
+1. 核心组件：编码器、解码器、注意力机制
+2. 每个部分的功能和组成
+3. 工作原理和关键步骤
+4. 为什么 Transformer 被设计成这样
+
+让我详细解释：
+
+## 编码器部分
+- 输入序列变成特征表示
+- 层数越多，表示越丰富
+- 每个层用 MLP + Attention 处理
+
+## 解码器部分
+- 解码序列变成真实输出
+- 通过注意力机制将特征与输入对齐
+- 使用 Transformer 的解码器结构
+
+## 注意力机制
+- 权重决定哪些特征被使用
+- 动态关注重点
+- 可以处理长序列中的上下文依赖
+
+让我用中文详细解释。
+
+[End thinking]
+
+# Transformer 模型的结构与原理
+
+Transformer 是一种自回归的深度学习模型，主要用于自然语言处理、机器翻译等任务。以下是它的详细结构原理：
+
+---
+
+## 一、整体架构
+
+```
+输入序列 → Encoder → Attention + MLP → 特征表示 → Decoder → 输出
+      ↓
+  多层注意力机制 + 层数越多表示越丰富
+```llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 214.3 t/s | Generation: 52.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 256 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp06dcbgk6.txt
+================================================================================

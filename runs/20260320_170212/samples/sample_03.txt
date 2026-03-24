@@ -1,0 +1,49 @@
+================================================================================
+Sample ID   : 03
+Timestamp   : 2026-03-20T17:02:25
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 20
+Prompt est. : 18
+Max new tok : 256
+Status      : ok
+TTFT        : 2.139999s
+TPOT        : 0.015651s
+E2E         : 7.696000s
+Output chars: 1305
+Output est. : 355
+
+PROMPT
+--------------------------------------------------------------------------------
+请写一段关于机器学习的介绍，200字左右
+
+ANSWER
+--------------------------------------------------------------------------------
+[Start thinking]
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Topic: Introduction to Machine Learning (ML).
+    *   Length: Around 200 Chinese characters (200 字左右).
+    *   Language: Chinese.
+
+2.  **Identify Key Components of a Machine Learning Introduction:**
+    *   Definition: What is it? (A branch of AI focused on algorithms and data).
+    *   Core Concept: "Black Box" (algorithmic decision making without understanding the underlying rule).
+    *   Key Algorithms: Decision trees, models, optimization.
+    *   Applications: Classification, regression, clustering, etc.
+    *   Importance: Improving accuracy, efficiency.
+    *   Summary/Conclusion: It's a tool for pattern recognition.
+
+3.  **Drafting - Attempt 1 (Mental Outline):**
+    机器学习是人工智能的一个重要分支。它研究如何编写一个算法来解决复杂问题。虽然我们无法知道它内部是如何思考的，但我们可以观察到它的结果。比如分类模型可以判断数据标签，回归模型可以预测数值。常见的算法有决策树、支持向量机。在真实世界中，我们用它来预测股票价格、诊断疾病llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 257.3 t/s | Generation: 48.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 256 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp7l4plfhb.txt
+================================================================================

@@ -1,0 +1,64 @@
+================================================================================
+Sample ID   : 10
+Timestamp   : 2026-03-20T17:03:18
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 16
+Prompt est. : 14
+Max new tok : 256
+Status      : ok
+TTFT        : 2.249501s
+TPOT        : 0.013695s
+E2E         : 7.946500s
+Output chars: 932
+Output est. : 416
+
+PROMPT
+--------------------------------------------------------------------------------
+分析一下计算机网络中的TCP协议
+
+ANSWER
+--------------------------------------------------------------------------------
+[Start thinking]
+用户的问题是关于分析 TCP 协议。这是一个计算机网络的基础问题，涉及 TCP 协议的主要特点、工作原理、关键机制和实际应用场景。我需要系统地讲解：
+
+1. TCP 协议的核心设计思想和特征
+2. 完整的 TCP 工作流程（三次握手、四方向消息、连接建立、数据传输、断开）
+3. 关键技术机制（滑动窗口、三次握手、ACK 机制等）
+4. 为什么 TCP 比 UDP 更适合某些场景
+5. 实际应用场景和实现方式
+
+[End thinking]
+
+# TCP 协议系统分析
+
+## 一、TCP 协议的核心设计思想
+
+TCP 是**面向连接、面向数据、可靠、有序**的传输协议，通过三次握手实现可靠端到端的数据传输，解决网络中常见传输问题。
+
+---
+
+## 二、TCP 完整工作原理
+
+### 1. 连接建立（三次握手）
+
+```
+客户端 -> 服务端  TCP 三次握手
+        ↑
+        ↓
+客户端发送：SYN 包
+        ↓
+服务端响应：SYN 包 + SYN+ACK 包（ACK 包包含序列号，表示已发送）
+        ↓
+客户端发送：SYN 包 + ACK 包
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 216.0 t/s | Generation: 47.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 256 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpwio4d8x8.txt
+================================================================================
