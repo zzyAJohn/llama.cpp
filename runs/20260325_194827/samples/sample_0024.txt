@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0024
+Timestamp   : 2026-03-25T19:58:36
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 77
+Prompt est. : 76
+Max new tok : 64
+Status      : ok
+TTFT        : 2.409321s
+TPOT        : 0.006947s
+E2E         : 3.854399s
+Output chars: 585
+Output est. : 208
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命韦六十二为供应链副总监，但供应链总监已由他人兼任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命韦六十二为供应链副总监，但供应链总监已由他人兼任。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+让我分析一下文本内容：
+1. "任命韦六十二为供应链副总监" - 这是正常的任命表述，韦六十二担任供应链副总监
+2. "但供应链总监已由他人兼任" - 这是一个转折关系，说明当前供应链llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 345.0 t/s | Generation: 54.5 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpo0io8kze.txt
+================================================================================

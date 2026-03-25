@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0012
+Timestamp   : 2026-03-25T19:57:48
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 79
+Prompt est. : 78
+Max new tok : 64
+Status      : ok
+TTFT        : 2.491004s
+TPOT        : 0.007521s
+E2E         : 4.047925s
+Output chars: 580
+Output est. : 207
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经公开竞聘，聘用何十六为品牌部经理，但品牌部已并入市场部。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经公开竞聘，聘用何十六为品牌部经理，但品牌部已并入市场部。
+
+[Start thinking]
+
+让我分析这个任命证书文本是否符合中文表达逻辑：
+
+1. 首先看"经公开竞聘"这一部分，这是合理的，说明这是一个公开选拔过程。
+
+2. 然后说"聘用何十六为品牌部经理"，这里的"聘用"通常用于政府机关、事业单位等正式机构，"llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 329.1 t/s | Generation: 53.5 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpoy5tk3ar.txt
+================================================================================

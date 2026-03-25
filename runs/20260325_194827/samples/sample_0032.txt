@@ -1,0 +1,40 @@
+================================================================================
+Sample ID   : 0032
+Timestamp   : 2026-03-25T19:59:07
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 64
+Prompt est. : 63
+Max new tok : 64
+Status      : ok
+TTFT        : 2.385174s
+TPOT        : 0.008516s
+E2E         : 4.011644s
+Output chars: 562
+Output est. : 191
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任花六十五为产品运营总监。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任花六十五为产品运营总监。
+
+[Start thinking]
+
+我需要判断“聘任花六十五为产品运营总监”这个任命证书文本是否符合中文表达逻辑。
+
+让我分析这个任命：
+1. 首先看“花六十五”这个名字，这应该是一个人的姓名，但作为普通人名，作为“花六十五”作为产品运营总监，这在常规llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 318.8 t/s | Generation: 47.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp7m_uibhz.txt
+================================================================================

@@ -1,0 +1,44 @@
+================================================================================
+Sample ID   : 0105
+Timestamp   : 2026-03-25T20:03:54
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 83
+Prompt est. : 82
+Max new tok : 64
+Status      : ok
+TTFT        : 2.212298s
+TPOT        : 0.007351s
+E2E         : 3.741236s
+Output chars: 585
+Output est. : 208
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经研究决定，聘任邓二十为审计部经理，然而审计部经理职位已空缺两年。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经研究决定，聘任邓二十为审计部经理，然而审计部经理职位已空缺两年。
+
+[Start thinking]
+
+我需要判断这段任命证书文本是否符合中文表达逻辑。
+
+首先，我需要理解这段文本在说什么：
+1. 关于聘任：经研究决定，聘任邓二十为审计部经理
+2. 关于空缺：审计部经理职位已空缺两年
+
+我的分析过程：
+1. 检查逻辑关系：聘任llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 343.3 t/s | Generation: 53.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpw18zuwoe.txt
+================================================================================

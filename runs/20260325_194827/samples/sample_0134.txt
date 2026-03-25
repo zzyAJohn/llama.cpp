@@ -1,0 +1,46 @@
+================================================================================
+Sample ID   : 0134
+Timestamp   : 2026-03-25T20:05:43
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 72
+Prompt est. : 71
+Max new tok : 64
+Status      : ok
+TTFT        : 2.416380s
+TPOT        : 0.008075s
+E2E         : 3.910179s
+Output chars: 566
+Output est. : 185
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命张一为首席战略官，但公司无战略规划需求。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命张一为首席战略官，但公司无战略规划需求。
+
+[Start thinking]
+
+让我分析这个任命证书文本的逻辑：
+
+1. 文本内容：任命张一为首席战略官，但公司无战略规划需求。
+
+2. 逻辑分析：
+- 任命张一为首席战略官
+- 但公司没有战略规划需求
+
+这里的逻辑链条存在问题：
+- 如果llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 345.3 t/s | Generation: 54.0 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpn32ofet5.txt
+================================================================================

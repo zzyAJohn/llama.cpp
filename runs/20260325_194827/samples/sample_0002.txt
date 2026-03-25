@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0002
+Timestamp   : 2026-03-25T19:48:31
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.236424s
+TPOT        : 0.007972s
+E2E         : 3.727237s
+Output chars: 566
+Output est. : 187
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命杨二十八为产品总监，同时撤销产品部。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命杨二十八为产品总监，同时撤销产品部。
+
+[Start thinking]
+
+我需要分析这个任命证书文本的逻辑合理性。
+
+首先，让我理解这个任命的内容：
+1. 任命杨二十八为产品总监
+2. 撤销产品部
+
+分析逻辑：
+1. 如果任命杨二十八为产品总监，那么产品部应该被撤销
+2. 这构成了一个llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 298.2 t/s | Generation: 52.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp9xk6zoy4.txt
+================================================================================

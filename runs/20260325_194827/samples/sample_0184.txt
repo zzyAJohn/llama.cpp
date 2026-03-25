@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0184
+Timestamp   : 2026-03-25T20:08:58
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 76
+Prompt est. : 75
+Max new tok : 64
+Status      : ok
+TTFT        : 2.347392s
+TPOT        : 0.007734s
+E2E         : 3.793644s
+Output chars: 567
+Output est. : 187
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任王五为财务总监，任期三年，但财务总监岗位已撤销。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任王五为财务总监，任期三年，但财务总监岗位已撤销。
+
+[Start thinking]
+
+让我分析这个任命证书文本的逻辑：
+
+1. 任命主体：聘任王五为财务总监
+2. 任命内容：聘任王五为财务总监
+3. 任期：三年
+4. 关键问题：任期届满后，财务总监岗位已撤销
+
+逻辑分析：
+- 任命：聘任llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 322.2 t/s | Generation: 54.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpgx7mjhit.txt
+================================================================================

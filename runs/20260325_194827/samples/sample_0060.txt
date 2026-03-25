@@ -1,0 +1,38 @@
+================================================================================
+Sample ID   : 0060
+Timestamp   : 2026-03-25T20:00:58
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 63
+Prompt est. : 62
+Max new tok : 64
+Status      : ok
+TTFT        : 2.587671s
+TPOT        : 0.009543s
+E2E         : 4.372128s
+Output chars: 557
+Output est. : 187
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任于八十五为保密办主任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任于八十五为保密办主任。
+
+[Start thinking]
+
+1. 首先，我需要拆解文本：“聘任于八十五为保密办主任”。
+2. 分析“聘任”：在中文公文和行政文件中，"聘任"是一个规范术语，指根据国家、部门或章程的规定，对特定人员作出任用决定，授予其职务。这符合中文公文llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 275.4 t/s | Generation: 47.0 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp3mgpuqy_.txt
+================================================================================

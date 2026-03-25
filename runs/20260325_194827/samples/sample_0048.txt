@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0048
+Timestamp   : 2026-03-25T20:00:09
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 75
+Prompt est. : 74
+Max new tok : 64
+Status      : ok
+TTFT        : 2.301404s
+TPOT        : 0.008294s
+E2E         : 3.794403s
+Output chars: 580
+Output est. : 180
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任史六十九为运维总监，但系统已上云，无运维需求。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任史六十九为运维总监，但系统已上云，无运维需求。
+
+[Start thinking]
+
+1.  **分析题目要求**：
+    *   任务是判断给定的任命证书文本是否符合中文表达逻辑。
+    *   输出只需要是 '合理' 或 '不合理'。
+    *   不要输出任何解释或多余内容。
+
+2.  **分析文本内容llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 336.4 t/s | Generation: 52.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp18eyf3bq.txt
+================================================================================

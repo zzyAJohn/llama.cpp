@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0164
+Timestamp   : 2026-03-25T20:07:40
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 77
+Prompt est. : 76
+Max new tok : 64
+Status      : ok
+TTFT        : 2.511386s
+TPOT        : 0.008218s
+E2E         : 4.072841s
+Output chars: 570
+Output est. : 190
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任尤三十一为研发部副经理，任期一年，但研发部已解散。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任尤三十一为研发部副经理，任期一年，但研发部已解散。
+
+[Start thinking]
+
+让我逐步分析任命证书文本的逻辑：
+
+1. 首先需要确定"尤三十一"的身份
+   - 姓名是"尤三十一"，这是一个具体的、可识别的姓名
+   - 在任命证书中，该人员作为"研发部副经理"，说明该人员确实存在并llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 304.4 t/s | Generation: 50.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpryg8lf1t.txt
+================================================================================

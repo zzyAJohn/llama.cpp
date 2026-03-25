@@ -1,0 +1,44 @@
+================================================================================
+Sample ID   : 0003
+Timestamp   : 2026-03-25T19:48:34
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 69
+Prompt est. : 68
+Max new tok : 64
+Status      : ok
+TTFT        : 2.249987s
+TPOT        : 0.008157s
+E2E         : 3.750834s
+Output chars: 560
+Output est. : 184
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任邬八十一为后勤主管，但后勤已外包。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任邬八十一为后勤主管，但后勤已外包。
+
+[Start thinking]
+
+让我分析这个任命证书的表述逻辑：
+
+1. 首先看任命内容："聘任邬八十一为后勤主管"
+2. 然后出现矛盾："但后勤已外包"
+
+问题在于："但后勤已外包"这个部分。
+
+"后勤外包"通常指企业将后勤工作（如llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 333.8 t/s | Generation: 54.9 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpmskp8xnj.txt
+================================================================================

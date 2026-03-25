@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0133
+Timestamp   : 2026-03-25T20:05:39
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 63
+Prompt est. : 62
+Max new tok : 64
+Status      : ok
+TTFT        : 2.280501s
+TPOT        : 0.009172s
+E2E         : 3.858013s
+Output chars: 551
+Output est. : 172
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命游八十八为内控经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命游八十八为内控经理。
+
+[Start thinking]
+
+让我分析这个任命证书文本的中文表达逻辑：
+
+1. 文本内容是："兹任命游八十八为内控经理"
+2. 分析关键点：
+   - "兹" - 古代汉语中的"兹"，表示"这样"、"这"，用于正式场合，表示"llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 325.3 t/s | Generation: 52.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpifqk7nng.txt
+================================================================================

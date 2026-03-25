@@ -1,0 +1,44 @@
+================================================================================
+Sample ID   : 0092
+Timestamp   : 2026-03-25T20:03:05
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 73
+Prompt est. : 72
+Max new tok : 64
+Status      : ok
+TTFT        : 2.419121s
+TPOT        : 0.007272s
+E2E         : 3.822566s
+Output chars: 570
+Output est. : 193
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任戚四十五为信息化部经理，但信息化部已关闭。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任戚四十五为信息化部经理，但信息化部已关闭。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+让我分析一下这个文本：
+1. 任命对象：聘任戚四十五
+2. 职位：信息化部经理
+3. 结果：但（表示转折或否定）信息化部已关闭
+
+中文逻辑上，如果一个人被任命为"llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 321.0 t/s | Generation: 56.3 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpp8zaw6vm.txt
+================================================================================

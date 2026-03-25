@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0148
+Timestamp   : 2026-03-25T20:06:37
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 68
+Prompt est. : 67
+Max new tok : 64
+Status      : ok
+TTFT        : 2.221094s
+TPOT        : 0.007968s
+E2E         : 3.695102s
+Output chars: 563
+Output est. : 185
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经竞聘考核，聘用华四十为培训部经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经竞聘考核，聘用华四十为培训部经理。
+
+[Start thinking]
+
+让我分析这个任命证书文本：
+
+1. "经竞聘考核" - 这是合理的，表示通过竞聘和考核程序，体现了程序的规范性
+2. "聘用" - 这是任命/聘任的正确用词，表示正式任用，与"聘任"意思相近但用词不同
+3. "llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 306.6 t/s | Generation: 53.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp_sslhd2o.txt
+================================================================================

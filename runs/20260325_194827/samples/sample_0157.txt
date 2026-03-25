@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0157
+Timestamp   : 2026-03-25T20:07:13
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 82
+Prompt est. : 81
+Max new tok : 64
+Status      : ok
+TTFT        : 2.326302s
+TPOT        : 0.008047s
+E2E         : 3.839113s
+Output chars: 575
+Output est. : 188
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经安全委员会决议，聘任彭五十九为安全总监，但安全委员会已不存在。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经安全委员会决议，聘任彭五十九为安全总监，但安全委员会已不存在。
+
+[Start thinking]
+
+1. 首先，我需要根据中文语法规则对这段文本进行分析。
+2. 文本包含两个关键信息：
+   - 经过安全委员会决议
+   - 聘任彭五十九为安全总监
+   - 安全委员会已不存在
+3. 在中文语境中，如果某llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 316.5 t/s | Generation: 51.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpu_kicpmv.txt
+================================================================================

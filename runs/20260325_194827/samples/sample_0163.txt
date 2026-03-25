@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0163
+Timestamp   : 2026-03-25T20:07:36
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 71
+Prompt est. : 70
+Max new tok : 64
+Status      : ok
+TTFT        : 2.450016s
+TPOT        : 0.008012s
+E2E         : 3.916187s
+Output chars: 566
+Output est. : 183
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命严三十九为供应链总监，优化供应链流程。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命严三十九为供应链总监，优化供应链流程。
+
+[Start thinking]
+
+让我分析这个任命证书文本：
+
+1. 文本内容：任命严三十九为供应链总监，优化供应链流程。
+
+2. 分析步骤：
+   - 检查是否有明确的任命主体（谁被任命为谁）
+   - 检查是否有明确的任命对象（谁被任命为谁llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 312.0 t/s | Generation: 54.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpjhw6f75o.txt
+================================================================================

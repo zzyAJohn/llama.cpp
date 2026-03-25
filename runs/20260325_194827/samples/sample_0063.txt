@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0063
+Timestamp   : 2026-03-25T20:01:11
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 71
+Prompt est. : 70
+Max new tok : 64
+Status      : ok
+TTFT        : 2.423411s
+TPOT        : 0.011590s
+E2E         : 4.185104s
+Output chars: 714
+Output est. : 152
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹聘任韩二十七为首席市场官，制定市场战略。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹聘任韩二十七为首席市场官，制定市场战略。
+
+[Start thinking]
+
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Judge whether the given appointment certificate text follows Chinese expression logic.
+    *   Output: Only '合理' (reasonable) or '不合理' (unreasonable). No other content.
+    *   Text to check:llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 230.2 t/s | Generation: 44.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpo1gvxqdq.txt
+================================================================================

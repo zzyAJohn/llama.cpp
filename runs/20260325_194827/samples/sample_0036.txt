@@ -1,0 +1,44 @@
+================================================================================
+Sample ID   : 0036
+Timestamp   : 2026-03-25T19:59:23
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 84
+Prompt est. : 83
+Max new tok : 64
+Status      : ok
+TTFT        : 2.465197s
+TPOT        : 0.006931s
+E2E         : 3.906806s
+Output chars: 587
+Output est. : 208
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命黄十五为西南大区经理，负责区域市场开拓，然而黄十五从未去过西南。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命黄十五为西南大区经理，负责区域市场开拓，然而黄十五从未去过西南。
+
+[Start thinking]
+
+我需要分析这个任命证书文本的逻辑合理性。
+
+1. 首先，我需要理解任命证书的含义：
+- 任命黄十五为西南大区经理
+- 这是一个正式的职务任命，意味着黄十五将被任命为西南大区经理
+
+2. 其次，我需要分析文本中的关键信息：
+- llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 338.0 t/s | Generation: 54.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpnmsv2k26.txt
+================================================================================

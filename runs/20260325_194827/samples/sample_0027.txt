@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0027
+Timestamp   : 2026-03-25T19:58:48
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 64
+Prompt est. : 63
+Max new tok : 64
+Status      : ok
+TTFT        : 2.379671s
+TPOT        : 0.008866s
+E2E         : 3.940118s
+Output chars: 554
+Output est. : 176
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命韦六十二为供应链副总监。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命韦六十二为供应链副总监。
+
+[Start thinking]
+
+让我分析这个任命证书文本：
+
+1. 文本内容："任命韦六十二为供应链副总监"
+
+2. 中文表达逻辑分析：
+- 中文公文中，任命（任命）作为主谓结构，后面是补语表示授予的职位
+- "为..." 结构表示llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 317.3 t/s | Generation: 50.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpv8qccm9t.txt
+================================================================================

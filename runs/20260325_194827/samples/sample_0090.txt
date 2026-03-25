@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0090
+Timestamp   : 2026-03-25T20:02:57
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 74
+Prompt est. : 73
+Max new tok : 64
+Status      : ok
+TTFT        : 2.334838s
+TPOT        : 0.008925s
+E2E         : 4.030576s
+Output chars: 567
+Output est. : 190
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命水五十为品牌传播总监，但品牌传播职能已外包。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命水五十为品牌传播总监，但品牌传播职能已外包。
+
+[Start thinking]
+
+让我分析这个任命证书文本的逻辑和表达问题：
+
+1. 文本内容：任命水五十为品牌传播总监，但品牌传播职能已外包。
+
+2. 逻辑分析：
+- "任命水五十为品牌传播总监" - 这是任命行为，水五十被任命为品牌传播llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 344.9 t/s | Generation: 45.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpqdwf7o90.txt
+================================================================================

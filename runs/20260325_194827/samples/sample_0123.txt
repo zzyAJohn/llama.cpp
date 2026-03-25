@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0123
+Timestamp   : 2026-03-25T20:05:00
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 65
+Prompt est. : 64
+Max new tok : 64
+Status      : ok
+TTFT        : 2.368040s
+TPOT        : 0.007599s
+E2E         : 3.827023s
+Output chars: 572
+Output est. : 192
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命苗六十四为市场调研经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命苗六十四为市场调研经理。
+
+[Start thinking]
+
+让我分析这个任命证书文本是否符合中文表达逻辑：
+
+1. 角色称谓："苗六十四" - 苗六十四是一个中文姓名，这是合理的称谓
+
+2. 职位称谓："市场调研经理" - 这是一个标准的中文职位头衔，意为"市场调研经理"，这是合理的
+
+3. llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 283.7 t/s | Generation: 53.9 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmprlyt3_vz.txt
+================================================================================

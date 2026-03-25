@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0159
+Timestamp   : 2026-03-25T20:07:20
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 73
+Prompt est. : 72
+Max new tok : 64
+Status      : ok
+TTFT        : 2.506035s
+TPOT        : 0.007959s
+E2E         : 4.058051s
+Output chars: 574
+Output est. : 195
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹聘任吴八为首席架构师，但公司没有架构师岗位。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹聘任吴八为首席架构师，但公司没有架构师岗位。
+
+[Start thinking]
+
+我需要判断这段任命证书文本是否符合中文表达逻辑。
+
+让我分析这段文本：
+
+1. "兹聘任吴八为首席架构师" - 这是一个正常的任命语句，使用了尊称和正式称谓
+
+2. "但公司没有架构师岗位" - 这个"但"连接了两个意思，llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 322.8 t/s | Generation: 50.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpm4lyvptl.txt
+================================================================================

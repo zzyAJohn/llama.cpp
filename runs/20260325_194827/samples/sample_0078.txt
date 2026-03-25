@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0078
+Timestamp   : 2026-03-25T20:02:10
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 81
+Prompt est. : 80
+Max new tok : 64
+Status      : ok
+TTFT        : 2.533066s
+TPOT        : 0.006964s
+E2E         : 3.960783s
+Output chars: 580
+Output est. : 205
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命赵六为项目负责人，负责新产品研发项目，但赵六没有相关经验。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命赵六为项目负责人，负责新产品研发项目，但赵六没有相关经验。
+
+[Start thinking]
+
+需要判断“任命赵六为项目负责人，负责新产品研发项目，但赵六没有相关经验。”这句话是否符合中文表达逻辑。
+
+分析步骤：
+1. 分析任命内容：赵六被任命为项目负责人
+2. 分析任命目的/背景：负责新产品研发项目
+3. 分析llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 289.6 t/s | Generation: 55.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpziz520ah.txt
+================================================================================

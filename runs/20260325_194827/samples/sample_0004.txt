@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0004
+Timestamp   : 2026-03-25T19:48:38
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 85
+Prompt est. : 84
+Max new tok : 64
+Status      : ok
+TTFT        : 2.206686s
+TPOT        : 0.006960s
+E2E         : 3.619478s
+Output chars: 581
+Output est. : 203
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经技术转移中心决议，聘任贾九十一为技术转移经理，但技术转移中心已关闭。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经技术转移中心决议，聘任贾九十一为技术转移经理，但技术转移中心已关闭。
+
+[Start thinking]
+
+让我分析这个任命证书文本的合规性：
+
+1. 内容分析：
+- "经技术转移中心决议" - 这是合理的描述，表明这是经过某个决策/决议，不是个人单方面决定。
+- "聘任贾九十一为技术转移经理" - 这是任命行为，逻辑llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 317.0 t/s | Generation: 55.9 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpmw6qk5bh.txt
+================================================================================

@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0116
+Timestamp   : 2026-03-25T20:04:35
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.254446s
+TPOT        : 0.007512s
+E2E         : 3.734381s
+Output chars: 568
+Output est. : 197
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命水五十为品牌传播总监，负责品牌推广。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命水五十为品牌传播总监，负责品牌推广。
+
+[Start thinking]
+
+我需要分析这个任命证书文本是否符合中文表达逻辑。
+
+文本内容：任命水五十为品牌传播总监，负责品牌推广。
+
+首先，我检查姓名的使用。在中国，姓名通常姓，名是名字。这里"水"应该是姓氏，"五十"是名字。但"品牌"作为职位llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 328.9 t/s | Generation: 56.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpmhof4f3s.txt
+================================================================================

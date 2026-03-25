@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0187
+Timestamp   : 2026-03-25T20:09:09
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 63
+Prompt est. : 62
+Max new tok : 64
+Status      : ok
+TTFT        : 2.327074s
+TPOT        : 0.008673s
+E2E         : 3.905536s
+Output chars: 559
+Output est. : 182
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命饶九十四为实验室主任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命饶九十四为实验室主任。
+
+[Start thinking]
+
+让我分析这个任命证书文本的逻辑：
+
+1. 文本内容是：“任命饶九十四为实验室主任”
+
+2. 检查逻辑一致性：
+- 这是一个正式的任命通知形式
+- 形式上正确：用“任命”作为动词，说明这是对特定人（饶九十四）的任命llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 295.6 t/s | Generation: 49.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp42qpfln4.txt
+================================================================================

@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0110
+Timestamp   : 2026-03-25T20:04:12
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 68
+Prompt est. : 67
+Max new tok : 64
+Status      : ok
+TTFT        : 2.155077s
+TPOT        : 0.007953s
+E2E         : 3.610491s
+Output chars: 565
+Output est. : 183
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经研究决定，聘任邓二十为审计部经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经研究决定，聘任邓二十为审计部经理。
+
+[Start thinking]
+
+让我分析这个任命证书文本的中文逻辑表达：
+
+1. "经研究决定" - 表示经过决策过程，这是正常的公文用语
+
+2. "聘任" - 任命/聘任是正式任命某人担任某职的表述，符合中文习惯
+
+3. "邓二十" - 人名，llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 326.6 t/s | Generation: 55.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp95axg2u5.txt
+================================================================================

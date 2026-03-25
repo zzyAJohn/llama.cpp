@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0008
+Timestamp   : 2026-03-25T19:57:33
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 79
+Prompt est. : 78
+Max new tok : 64
+Status      : ok
+TTFT        : 2.616758s
+TPOT        : 0.008184s
+E2E         : 4.327179s
+Output chars: 585
+Output est. : 209
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命陈十二为华东区域经理，但华东区域经理职位已由他人担任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命陈十二为华东区域经理，但华东区域经理职位已由他人担任。
+
+[Start thinking]
+
+我需要分析这个任命证书文本，看看它是否符合中文表达逻辑。
+
+这个文本是：“任命陈十二为华东区域经理，但华东区域经理职位已由他人担任。”
+
+让我逐一分析这个文本：
+
+1. 第一部分“任命陈十二为华东区域经理” - 这是一个任命行为，陈llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 264.9 t/s | Generation: 45.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpvlo8qy9o.txt
+================================================================================

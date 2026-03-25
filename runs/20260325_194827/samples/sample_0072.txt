@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0072
+Timestamp   : 2026-03-25T20:01:46
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 78
+Prompt est. : 77
+Max new tok : 64
+Status      : ok
+TTFT        : 2.374615s
+TPOT        : 0.008728s
+E2E         : 3.989247s
+Output chars: 564
+Output est. : 185
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经总经理办公会决议，任命孙十为运营总监，而运营部已解散。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经总经理办公会决议，任命孙十为运营总监，而运营部已解散。
+
+[Start thinking]
+
+1. 首先，我需要解析文本中的关键信息。
+2. 识别主要事件：任命孙十为运营总监。
+3. 识别关键事实：运营部已解散。
+4. 分析逻辑关系：
+   - 如果运营部解散，那么“运营总监”这个职位llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 289.5 t/s | Generation: 48.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp00av2bcm.txt
+================================================================================

@@ -1,0 +1,46 @@
+================================================================================
+Sample ID   : 0140
+Timestamp   : 2026-03-25T20:06:07
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 71
+Prompt est. : 70
+Max new tok : 64
+Status      : ok
+TTFT        : 2.363476s
+TPOT        : 0.008008s
+E2E         : 3.804862s
+Output chars: 561
+Output est. : 180
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命施三十五为华南区域经理，自即日起生效。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命施三十五为华南区域经理，自即日起生效。
+
+[Start thinking]
+
+让我分析这个任命证书的文本逻辑：
+
+1. 文本内容："任命施三十五为华南区域经理，自即日起生效"
+
+2. 检查逻辑：
+- 任命主体：施三十五
+- 任命对象：华南区域经理
+- 生效时间：自即日起生效
+
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 302.5 t/s | Generation: 54.5 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpnnxcnm2j.txt
+================================================================================

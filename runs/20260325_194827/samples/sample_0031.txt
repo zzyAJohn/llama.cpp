@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0031
+Timestamp   : 2026-03-25T19:59:03
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 62
+Prompt est. : 61
+Max new tok : 64
+Status      : ok
+TTFT        : 2.424420s
+TPOT        : 0.008417s
+E2E         : 3.931110s
+Output chars: 555
+Output est. : 179
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命郝八十为行政主管。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命郝八十为行政主管。
+
+[Start thinking]
+
+让我分析一下这个任命证书的中文表达逻辑：
+
+1. 文字内容："兹任命郝八十为行政主管"
+2. 中文表达逻辑分析：
+- "兹"：表示“因此”、“鉴于”，是公文中的常见开头语，表示陈述背景或理由
+- "任命"：llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 286.7 t/s | Generation: 55.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpx9wtbcc3.txt
+================================================================================

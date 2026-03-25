@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0171
+Timestamp   : 2026-03-25T20:08:08
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.333061s
+TPOT        : 0.007945s
+E2E         : 3.922103s
+Output chars: 574
+Output est. : 200
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任魏二十二为首席数据官，负责数据治理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任魏二十二为首席数据官，负责数据治理。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+让我分析一下这个文本：
+
+1. "聘任魏二十二为首席数据官" - 这是正确的任命语，"聘任"是任命官员的常用动词，"魏二十二"是具体的职位名称，"首席数据官"是中文中对首席数据llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 292.5 t/s | Generation: 49.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmplrd6ikwk.txt
+================================================================================

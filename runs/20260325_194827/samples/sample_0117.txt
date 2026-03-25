@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0117
+Timestamp   : 2026-03-25T20:04:38
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 78
+Prompt est. : 77
+Max new tok : 64
+Status      : ok
+TTFT        : 2.268718s
+TPOT        : 0.007130s
+E2E         : 3.666124s
+Output chars: 574
+Output est. : 196
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经董事会表决，聘任窦五十一为公司秘书，但窦五十一不识字。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经董事会表决，聘任窦五十一为公司秘书，但窦五十一不识字。
+
+[Start thinking]
+
+需要判断这段任命证书文本是否符合中文表达逻辑。
+
+分析内容：
+1. 文本描述：经董事会表决，聘任窦五十一为公司秘书
+2. 关键事实：窦五十一不识字
+
+判断依据：
+1. 任命通知的常规表达应该包括授予职位这一信息
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 311.3 t/s | Generation: 56.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp39ahgue8.txt
+================================================================================

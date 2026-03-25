@@ -1,0 +1,38 @@
+================================================================================
+Sample ID   : 0119
+Timestamp   : 2026-03-25T20:04:46
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 74
+Prompt est. : 73
+Max new tok : 64
+Status      : ok
+TTFT        : 2.222334s
+TPOT        : 0.007694s
+E2E         : 3.730386s
+Output chars: 568
+Output est. : 196
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命郝八十为行政主管，但行政部已合并到综合部。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命郝八十为行政主管，但行政部已合并到综合部。
+
+[Start thinking]
+
+1.  **分析文本内容**：文本提到“任命郝八十为行政主管”，即授予一个职务（行政主管）。
+2.  **分析上下文逻辑**：紧接着的“但行政部已合并到综合部”是紧接着的陈述，说明该行政部不再独立存在或合并了llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 326.3 t/s | Generation: 52.0 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpjfs5vlw1.txt
+================================================================================

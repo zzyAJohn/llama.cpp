@@ -1,0 +1,39 @@
+================================================================================
+Sample ID   : 0054
+Timestamp   : 2026-03-25T20:00:33
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.542874s
+TPOT        : 0.008747s
+E2E         : 4.283466s
+Output chars: 571
+Output est. : 199
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任钱十一为总工程师，但钱十一学历造假。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任钱十一为总工程师，但钱十一学历造假。
+
+[Start thinking]
+
+1. 首先分析任命证书文本：“聘任钱十一为总工程师，但钱十一学历造假。”
+2. 检查逻辑关系：任命证书中包含了两个关键信息——“聘任”和“学历造假”。
+3. 判断是否存在逻辑矛盾：在中国法律、行政法规及职业道德规范中，如果llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 283.0 t/s | Generation: 45.9 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp26_9ed5d.txt
+================================================================================

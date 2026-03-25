@@ -1,0 +1,40 @@
+================================================================================
+Sample ID   : 0139
+Timestamp   : 2026-03-25T20:06:03
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 64
+Prompt est. : 63
+Max new tok : 64
+Status      : ok
+TTFT        : 2.432036s
+TPOT        : 0.007991s
+E2E         : 3.894391s
+Output chars: 556
+Output est. : 183
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命魏一百为业务拓展总监。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命魏一百为业务拓展总监。
+
+[Start thinking]
+
+分析步骤：
+1. 首先检查文本的基本结构：任命证书通常包含"兹任命..."的格式。
+2. 检查关键信息：文本中提到了"魏一百"作为被任命者（人名），以及职务"业务拓展总监"。
+3. 验证姓名和职务的合理性llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 297.6 t/s | Generation: 53.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpd7gecocj.txt
+================================================================================

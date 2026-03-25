@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0065
+Timestamp   : 2026-03-25T20:01:18
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 64
+Prompt est. : 63
+Max new tok : 64
+Status      : ok
+TTFT        : 2.254046s
+TPOT        : 0.008565s
+E2E         : 3.804377s
+Output chars: 556
+Output est. : 181
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命顾九十六为检验室主任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命顾九十六为检验室主任。
+
+[Start thinking]
+
+我需要判断"兹任命顾九十六为检验室主任"是否符合中文表达逻辑。
+
+分析：
+1. 检查格式：中文任命证书通常采用"兹...为..."的格式，这里符合标准格式
+2. 检查称谓：顾九十六是姓名，合理
+3. 检查llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 347.0 t/s | Generation: 53.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp89kh82us.txt
+================================================================================

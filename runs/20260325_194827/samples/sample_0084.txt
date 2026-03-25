@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0084
+Timestamp   : 2026-03-25T20:02:32
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 78
+Prompt est. : 77
+Max new tok : 64
+Status      : ok
+TTFT        : 2.234076s
+TPOT        : 0.009077s
+E2E         : 3.967702s
+Output chars: 572
+Output est. : 191
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命喻四十八为东北区域总经理，但东北区域已合并至华北。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命喻四十八为东北区域总经理，但东北区域已合并至华北。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+1. 首先分析文本中的关键信息：
+- 被任命人：喻四十八
+- 职位名称：东北区域总经理
+- 当前状态：东北区域已合并至华北
+
+2. 分析逻辑关系：
+- "已llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 315.7 t/s | Generation: 49.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpp6r4q4hq.txt
+================================================================================

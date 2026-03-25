@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0022
+Timestamp   : 2026-03-25T19:58:28
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 69
+Prompt est. : 68
+Max new tok : 64
+Status      : ok
+TTFT        : 2.322404s
+TPOT        : 0.008808s
+E2E         : 3.960782s
+Output chars: 563
+Output est. : 186
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经客户部决议，聘任谢九十九为客户总监。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经客户部决议，聘任谢九十九为客户总监。
+
+[Start thinking]
+
+让我分析这个任命证书文本：
+
+1. 文本内容是："经客户部决议，聘任谢九十九为客户总监。"
+
+2. 检查逻辑关系：
+- "经客户部决议"：表示基于客户部做出的正式决定，这是合理的前提
+- "聘任"：这是任命、llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 310.3 t/s | Generation: 49.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpjrgsk8ob.txt
+================================================================================

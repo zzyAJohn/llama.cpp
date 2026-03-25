@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0039
+Timestamp   : 2026-03-25T19:59:35
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 69
+Prompt est. : 68
+Max new tok : 64
+Status      : ok
+TTFT        : 2.383505s
+TPOT        : 0.009157s
+E2E         : 3.839536s
+Output chars: 724
+Output est. : 159
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经办公室决定，聘任常八十三为前台主管。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经办公室决定，聘任常八十三为前台主管。
+
+[Start thinking]
+
+Thinking Process:
+
+1.  **Analyze the Request:** The user wants to know if a specific任命证书 (appointment certificate) text follows Chinese logical expression rules. The output must be strictly "合理" (reasonable) or "不合理" (unreasonable), with no other content.
+
+2.  **Anllama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 304.6 t/s | Generation: 54.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpdoffnjn3.txt
+================================================================================

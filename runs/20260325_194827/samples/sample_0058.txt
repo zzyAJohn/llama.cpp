@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0058
+Timestamp   : 2026-03-25T20:00:50
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.595900s
+TPOT        : 0.008857s
+E2E         : 4.278708s
+Output chars: 568
+Output est. : 190
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任鲁六十一为生产副厂长，协助生产管理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任鲁六十一为生产副厂长，协助生产管理。
+
+[Start thinking]
+
+我需要判断任命证书文本是否符合中文表达逻辑。
+
+让我分析这个任命证书文本：
+1. "聘任" - 这是任命/聘任的正式词汇，表示对某人职位的授予，符合中文任命语法的规范
+2. "鲁六十一" - 人名，符合中文命名习惯
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 309.4 t/s | Generation: 48.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpa7wjchba.txt
+================================================================================

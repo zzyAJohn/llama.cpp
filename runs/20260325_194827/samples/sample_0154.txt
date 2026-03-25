@@ -1,0 +1,40 @@
+================================================================================
+Sample ID   : 0154
+Timestamp   : 2026-03-25T20:07:00
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 77
+Prompt est. : 76
+Max new tok : 64
+Status      : ok
+TTFT        : 2.404467s
+TPOT        : 0.008305s
+E2E         : 3.999086s
+Output chars: 580
+Output est. : 192
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经董事会批准，任命王一为首席战略官，负责公司战略规划。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经董事会批准，任命王一为首席战略官，负责公司战略规划。
+
+[Start thinking]
+
+1.  **分析文本内容**：任命证书文本为“经董事会批准，任命王一为首席战略官，负责公司战略规划”。
+2.  **识别关键信息**：
+    *   主体/行动者：“经董事会批准”（需要董事会通过/决策）。
+    *   llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 310.3 t/s | Generation: 48.9 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpsq5fhw45.txt
+================================================================================

@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0038
+Timestamp   : 2026-03-25T19:59:31
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 63
+Prompt est. : 62
+Max new tok : 64
+Status      : ok
+TTFT        : 2.344576s
+TPOT        : 0.009501s
+E2E         : 3.893163s
+Output chars: 547
+Output est. : 163
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命郎六十为质量副经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命郎六十为质量副经理。
+
+[Start thinking]
+
+让我分析这个任命证书文本的语法和逻辑：
+
+1. 主体：郎（这是人名，应该是“郎某某”）
+2. 职位：质量副经理
+3. 职务级别：副经理
+
+检查逻辑关系：
+- 人名 + 职务 = 任命
+- llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 326.8 t/s | Generation: 51.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpn9ndlovg.txt
+================================================================================

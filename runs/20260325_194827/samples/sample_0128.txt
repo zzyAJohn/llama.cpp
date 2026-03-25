@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0128
+Timestamp   : 2026-03-25T20:05:20
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 77
+Prompt est. : 76
+Max new tok : 64
+Status      : ok
+TTFT        : 2.616707s
+TPOT        : 0.008736s
+E2E         : 4.241691s
+Output chars: 570
+Output est. : 186
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经风控部推荐，聘任成八十七为风控经理，但风控部已撤销。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经风控部推荐，聘任成八十七为风控经理，但风控部已撤销。
+
+[Start thinking]
+
+我需要分析这个任命证书文本是否符合中文表达逻辑。
+
+1. 首先，我应该解析这个文本：
+- "经风控部推荐" - 经过风控部的推荐
+- "聘任" - 聘任（任命）
+- "成八十七" - 八十七岁
+- "为风控llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 278.4 t/s | Generation: 47.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpwytzc8oz.txt
+================================================================================

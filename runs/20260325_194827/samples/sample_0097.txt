@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0097
+Timestamp   : 2026-03-25T20:03:24
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 76
+Prompt est. : 75
+Max new tok : 64
+Status      : ok
+TTFT        : 2.201663s
+TPOT        : 0.007041s
+E2E         : 3.602802s
+Output chars: 577
+Output est. : 199
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经竞聘考核，聘用华四十为培训部经理，但培训部已撤销。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经竞聘考核，聘用华四十为培训部经理，但培训部已撤销。
+
+[Start thinking]
+
+让我分析一下这个任命证书文本的逻辑：
+
+1. 文本开头提到"经竞聘考核"，说明这是竞聘后的结果，符合任命逻辑
+
+2. "聘用华四十为培训部经理" - 华四十成功通过了竞聘，被聘任为培训部经理，这是合理的
+
+3. "但培训部llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 317.6 t/s | Generation: 56.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp7vip29ds.txt
+================================================================================

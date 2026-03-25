@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0162
+Timestamp   : 2026-03-25T20:07:32
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 73
+Prompt est. : 72
+Max new tok : 64
+Status      : ok
+TTFT        : 2.376443s
+TPOT        : 0.007843s
+E2E         : 3.819479s
+Output chars: 563
+Output est. : 184
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命傅八十六为法务专员主管，但法务专员已离职。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命傅八十六为法务专员主管，但法务专员已离职。
+
+[Start thinking]
+
+让我分析这个任命证书文本的逻辑问题：
+
+1. 文本内容：任命傅八十六为法务专员主管，但法务专员已离职。
+
+2. 逻辑检查：
+- 前半部分：任命傅八十六为法务专员主管
+- 后半部分：但法务专员已离职
+
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 339.5 t/s | Generation: 55.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmppbw03lyw.txt
+================================================================================

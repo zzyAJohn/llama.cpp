@@ -1,0 +1,39 @@
+================================================================================
+Sample ID   : 0151
+Timestamp   : 2026-03-25T20:06:48
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 76
+Prompt est. : 75
+Max new tok : 64
+Status      : ok
+TTFT        : 2.416733s
+TPOT        : 0.008311s
+E2E         : 3.937615s
+Output chars: 571
+Output est. : 183
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经项目部提名，聘任费七十一为项目经理，但项目已终止。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经项目部提名，聘任费七十一为项目经理，但项目已终止。
+
+[Start thinking]
+
+1.  **分析文本内容**：
+    *   **事件**：项目经理被聘任。
+    *   **金额**：聘任费七十一（这显然是个错误，因为七十一通常指一个数字，如71元，如果是71万元或71天，语境不符，llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 301.6 t/s | Generation: 51.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpjv3wc1on.txt
+================================================================================

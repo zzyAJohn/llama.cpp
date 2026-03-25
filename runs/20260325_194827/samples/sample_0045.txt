@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0045
+Timestamp   : 2026-03-25T19:59:58
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.400661s
+TPOT        : 0.006817s
+E2E         : 3.791325s
+Output chars: 579
+Output est. : 204
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：根据工作需要，任命陈十二为华东区域经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：根据工作需要，任命陈十二为华东区域经理。
+
+[Start thinking]
+
+我需要分析这个任命证书文本是否符合中文表达逻辑。
+
+首先，分析文本内容："根据工作需要，任命陈十二为华东区域经理。"
+
+接下来，逐字检查逻辑和表达：
+1. "根据工作需要" - 这个理由充分，说明任命是基于客观条件（工作需要），符合逻辑，llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 294.8 t/s | Generation: 56.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp95ey370b.txt
+================================================================================

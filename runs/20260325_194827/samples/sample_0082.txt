@@ -1,0 +1,39 @@
+================================================================================
+Sample ID   : 0082
+Timestamp   : 2026-03-25T20:02:25
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 75
+Prompt est. : 74
+Max new tok : 64
+Status      : ok
+TTFT        : 2.363732s
+TPOT        : 0.007777s
+E2E         : 3.888019s
+Output chars: 571
+Output est. : 196
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任罗十八为财务副总监，但财务副总监已由他人担任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任罗十八为财务副总监，但财务副总监已由他人担任。
+
+[Start thinking]
+
+1. 首先需要分析“聘任”的含义。在公文中，“聘任”通常用于政府、事业单位或大型企业，指由上级或上级单位决定任命某人担任职务。
+2. 其次分析“财务副总监”这个职位的常规设立情况。
+   - 在企业或政府机构中，llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 349.8 t/s | Generation: 52.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp34u2gwaj.txt
+================================================================================

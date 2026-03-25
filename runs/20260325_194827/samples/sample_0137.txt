@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0137
+Timestamp   : 2026-03-25T20:05:55
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 75
+Prompt est. : 74
+Max new tok : 64
+Status      : ok
+TTFT        : 2.448852s
+TPOT        : 0.009036s
+E2E         : 4.165605s
+Output chars: 569
+Output est. : 190
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹聘任金四十一为首席技术官，但金四十一无技术背景。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹聘任金四十一为首席技术官，但金四十一无技术背景。
+
+[Start thinking]
+
+我需要分析这个任命证书文本的逻辑。
+
+文本内容："兹聘任金四十一为首席技术官，但金四十一无技术背景。"
+
+分析过程：
+1. "聘任" - 任命某人担任职位，这是正确的使用
+2. "首席技术官" - 头衔，这是llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 292.7 t/s | Generation: 44.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpz69hcgz1.txt
+================================================================================

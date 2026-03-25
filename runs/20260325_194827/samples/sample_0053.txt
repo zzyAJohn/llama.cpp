@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0053
+Timestamp   : 2026-03-25T20:00:29
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 62
+Prompt est. : 61
+Max new tok : 64
+Status      : ok
+TTFT        : 2.452926s
+TPOT        : 0.010896s
+E2E         : 4.327093s
+Output chars: 554
+Output est. : 172
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任邬八十一为后勤主管。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任邬八十一为后勤主管。
+
+[Start thinking]
+
+1. 首先，我需要理解任务：请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+
+2. 分析文本内容：
+   - 任命对象：邬八十一
+   - 职位任命：为后勤主管
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 286.8 t/s | Generation: 40.3 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpsca5_wup.txt
+================================================================================

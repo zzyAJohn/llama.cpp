@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0011
+Timestamp   : 2026-03-25T19:57:44
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.366854s
+TPOT        : 0.009212s
+E2E         : 3.942065s
+Output chars: 561
+Output est. : 171
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经考核合格，决定聘用周七为市场部副经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经考核合格，决定聘用周七为市场部副经理。
+
+[Start thinking]
+
+分析过程：
+1. 分析文本结构：
+   - 时间状语"经考核合格" - 这是任命的前提条件，逻辑通顺
+   - 主体"周七" - 明确的人员姓名，合理
+   - 职务"市场部副经理" - 这是正确的管理llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 325.7 t/s | Generation: 53.6 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpsnuh9w0q.txt
+================================================================================

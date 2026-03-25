@@ -1,0 +1,44 @@
+================================================================================
+Sample ID   : 0129
+Timestamp   : 2026-03-25T20:05:24
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 80
+Prompt est. : 79
+Max new tok : 64
+Status      : ok
+TTFT        : 2.477492s
+TPOT        : 0.006819s
+E2E         : 3.929918s
+Output chars: 588
+Output est. : 213
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命苏五十四为人力资源副经理，但人力资源部经理已由他人担任。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命苏五十四为人力资源副经理，但人力资源部经理已由他人担任。
+
+[Start thinking]
+
+我需要分析这个任命证书的文本，判断其是否符合中文表达逻辑。
+
+首先看任命内容：任命苏五十四为人力资源副经理。
+
+关键信息：人力资源部经理已由他人担任。
+
+逻辑分析：
+1. 如果人力资源部经理由他人担任，那么任命苏五十四成为人力资源副经理llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 321.3 t/s | Generation: 54.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpyl71p1rp.txt
+================================================================================

@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0191
+Timestamp   : 2026-03-25T20:09:25
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 77
+Prompt est. : 73
+Max new tok : 64
+Status      : ok
+TTFT        : 2.336939s
+TPOT        : 0.008029s
+E2E         : 3.862358s
+Output chars: 572
+Output est. : 190
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：任命魏四十二为西北区域经理，自2025年5月1日生效。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：任命魏四十二为西北区域经理，自2025年5月1日生效。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+首先，让我分析这个文本的各个部分：
+1. "任命魏四十二为西北区域经理" - 这是一个任命，指定魏四十二为西北区域经理
+2. "自2025年5月1日生效" -llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 344.2 t/s | Generation: 52.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpd09v9v90.txt
+================================================================================

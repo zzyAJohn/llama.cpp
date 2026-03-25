@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0127
+Timestamp   : 2026-03-25T20:05:16
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 88
+Prompt est. : 87
+Max new tok : 64
+Status      : ok
+TTFT        : 2.499104s
+TPOT        : 0.007634s
+E2E         : 3.987789s
+Output chars: 585
+Output est. : 195
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经公司战略委员会决定，聘任张三十六为创新业务部负责人，但创新业务部尚未成立。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经公司战略委员会决定，聘任张三十六为创新业务部负责人，但创新业务部尚未成立。
+
+[Start thinking]
+
+我需要分析这个任命证书文本的语意逻辑。
+
+1. 首先，我需要理解任命证书的核心信息：
+   - 任命方：公司战略委员会
+   - 被任命人：张三十六
+   - 职务：创新业务部负责人
+   - 背景说明：但创新业务llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 335.6 t/s | Generation: 52.8 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmplaq7_r3f.txt
+================================================================================

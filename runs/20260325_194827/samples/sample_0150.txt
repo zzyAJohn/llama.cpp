@@ -1,0 +1,40 @@
+================================================================================
+Sample ID   : 0150
+Timestamp   : 2026-03-25T20:06:45
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 69
+Prompt est. : 68
+Max new tok : 64
+Status      : ok
+TTFT        : 2.255971s
+TPOT        : 0.007409s
+E2E         : 3.693302s
+Output chars: 566
+Output est. : 194
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任曹三十八为生产厂长，负责生产调度。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任曹三十八为生产厂长，负责生产调度。
+
+[Start thinking]
+
+我需要分析任命证书文本的逻辑和语法。
+
+1. 首先看核心内容：任命曹三十八为生产厂长
+2. 这涉及到一个职务名称"生产厂长"，在中国法律和商业实践中，这个职位通常称为"生产部长"或"生产副厂长"，而不是"生产厂长"llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 334.0 t/s | Generation: 55.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmph139n5gy.txt
+================================================================================

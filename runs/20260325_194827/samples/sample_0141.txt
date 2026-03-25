@@ -1,0 +1,43 @@
+================================================================================
+Sample ID   : 0141
+Timestamp   : 2026-03-25T20:06:10
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 80
+Prompt est. : 79
+Max new tok : 64
+Status      : ok
+TTFT        : 2.305344s
+TPOT        : 0.007842s
+E2E         : 3.920896s
+Output chars: 580
+Output est. : 206
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经质量部推荐，聘任单九十五为质量体系主管，但质量体系已外包。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经质量部推荐，聘任单九十五为质量体系主管，但质量体系已外包。
+
+[Start thinking]
+
+我需要判断这段任命证书文本是否符合中文表达逻辑。
+
+让我分析这个任命证书文本：
+"经质量部推荐，聘任单九十五为质量体系主管，但质量体系已外包。"
+
+主要问题：
+1. 第一句话："经质量部推荐，聘任单九十五为质量体系主管"llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 340.6 t/s | Generation: 50.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmprtmzmops.txt
+================================================================================

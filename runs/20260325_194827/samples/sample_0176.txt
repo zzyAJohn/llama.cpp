@@ -1,0 +1,45 @@
+================================================================================
+Sample ID   : 0176
+Timestamp   : 2026-03-25T20:08:27
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 72
+Prompt est. : 71
+Max new tok : 64
+Status      : ok
+TTFT        : 2.352478s
+TPOT        : 0.008286s
+E2E         : 4.017919s
+Output chars: 578
+Output est. : 201
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命乐八十四为档案室主任，但档案室已撤销。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命乐八十四为档案室主任，但档案室已撤销。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+首先，让我分析这个文本的内容：
+- 任命内容为：任命乐八十四为档案室主任
+- 但实际状况：档案室已撤销
+
+接下来，我需要判断这个表述是否有逻辑问题或不符合中文表达习惯。
+
+分析步骤llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 337.3 t/s | Generation: 47.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpgz24hqy_.txt
+================================================================================

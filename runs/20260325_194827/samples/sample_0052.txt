@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0052
+Timestamp   : 2026-03-25T20:00:24
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 73
+Prompt est. : 72
+Max new tok : 64
+Status      : ok
+TTFT        : 2.490108s
+TPOT        : 0.008625s
+E2E         : 4.189163s
+Output chars: 573
+Output est. : 197
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹聘任褚二十四为首席运营官，负责日常运营工作。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹聘任褚二十四为首席运营官，负责日常运营工作。
+
+[Start thinking]
+
+1.  **分析任务**：用户希望判断一个中文任命证书文本是否符合中文表达逻辑。需要输出'合理'或'不合理'，且不要有其他内容。
+
+2.  **分析文本**：文本是“兹聘任褚二十四为首席运营官，负责日常运营工作”。
+
+3llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 321.4 t/s | Generation: 45.2 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp3k24qz_z.txt
+================================================================================

@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0047
+Timestamp   : 2026-03-25T20:00:05
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 88
+Prompt est. : 84
+Max new tok : 64
+Status      : ok
+TTFT        : 2.293396s
+TPOT        : 0.007536s
+E2E         : 3.762828s
+Output chars: 580
+Output est. : 195
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹聘任林十四为法务部总监，自2025年3月1日起生效，但林十四已被刑事拘留。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹聘任林十四为法务部总监，自2025年3月1日起生效，但林十四已被刑事拘留。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+让我逐一分析关键信息：
+1. 姓名：林十四 - 这是中文名，正确
+2. 职位：法务部总监 - 这是正式职位名称，正确
+3. 生效日期：2025年3月1日llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 317.5 t/s | Generation: 55.0 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpp0wz8qs5.txt
+================================================================================

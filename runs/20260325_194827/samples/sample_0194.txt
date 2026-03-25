@@ -1,0 +1,40 @@
+================================================================================
+Sample ID   : 0194
+Timestamp   : 2026-03-25T20:09:37
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 86
+Prompt est. : 85
+Max new tok : 64
+Status      : ok
+TTFT        : 2.314558s
+TPOT        : 0.007181s
+E2E         : 3.836942s
+Output chars: 584
+Output est. : 212
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经总裁办公会决议，任命冯二十三为海外事业部总经理，然而海外事业部已裁撤。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经总裁办公会决议，任命冯二十三为海外事业部总经理，然而海外事业部已裁撤。
+
+[Start thinking]
+
+1. 首先，我需要理解用户的问题：请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经总裁办公会决议，任命冯二十三为海外事业部总经理，然而海外事业部已裁撤。
+
+2. llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 360.6 t/s | Generation: 53.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpyq_aglkq.txt
+================================================================================

@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0083
+Timestamp   : 2026-03-25T20:02:29
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 70
+Prompt est. : 69
+Max new tok : 64
+Status      : ok
+TTFT        : 2.351389s
+TPOT        : 0.009413s
+E2E         : 3.829303s
+Output chars: 752
+Output est. : 157
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经董事会提名，聘任朱二十九为公司副总裁。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经董事会提名，聘任朱二十九为公司副总裁。
+
+[Start thinking]
+
+Let me analyze the text step by step to determine if it conveys logical information correctly:
+
+1. The first part "经董事会提名" means "after being nominated by the board of directors" - this is a proper action and implies there was a nomination process, making the subsequent action logical.
+
+2. "llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 309.9 t/s | Generation: 53.1 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpd7_geksr.txt
+================================================================================

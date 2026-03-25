@@ -1,0 +1,42 @@
+================================================================================
+Sample ID   : 0042
+Timestamp   : 2026-03-25T19:59:46
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 72
+Prompt est. : 71
+Max new tok : 64
+Status      : ok
+TTFT        : 2.311452s
+TPOT        : 0.008464s
+E2E         : 3.945035s
+Output chars: 568
+Output est. : 193
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：聘任岑七十三为数据科学家，但公司无数据可用。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：聘任岑七十三为数据科学家，但公司无数据可用。
+
+[Start thinking]
+
+我需要分析这个任命证书文本是否符合中文表达逻辑。
+
+1. 首先，我检查文本内容：聘任岑七十三为数据科学家，但公司无数据可用。
+
+2. 分析第一个部分"聘任岑七十三为数据科学家"：
+- "聘任"是任命、聘任的正确用llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 313.2 t/s | Generation: 48.7 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpxcoozdwu.txt
+================================================================================

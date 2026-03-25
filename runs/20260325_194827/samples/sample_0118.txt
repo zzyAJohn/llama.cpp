@@ -1,0 +1,39 @@
+================================================================================
+Sample ID   : 0118
+Timestamp   : 2026-03-25T20:04:42
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 71
+Prompt est. : 70
+Max new tok : 64
+Status      : ok
+TTFT        : 2.311849s
+TPOT        : 0.006911s
+E2E         : 3.707825s
+Output chars: 572
+Output est. : 202
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经安全委员会决议，聘任彭五十九为安全总监。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经安全委员会决议，聘任彭五十九为安全总监。
+
+[Start thinking]
+
+我需要判断“经安全委员会决议，聘任彭五十九为安全总监”是否符合中文表达逻辑。
+
+1. 首先分析“经安全委员会决议”：这个短语在中文中通常表示“经过安全委员会的经过/决议”或“经过安全委员会的通过”。虽然语法结构不完整（缺少llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 328.6 t/s | Generation: 57.0 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp_ecihozs.txt
+================================================================================

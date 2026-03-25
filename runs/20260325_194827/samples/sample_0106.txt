@@ -1,0 +1,40 @@
+================================================================================
+Sample ID   : 0106
+Timestamp   : 2026-03-25T20:03:57
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 71
+Prompt est. : 70
+Max new tok : 64
+Status      : ok
+TTFT        : 2.182853s
+TPOT        : 0.007927s
+E2E         : 3.609780s
+Output chars: 568
+Output est. : 180
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经财务部推荐，聘任马六十三为财务分析经理。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经财务部推荐，聘任马六十三为财务分析经理。
+
+[Start thinking]
+
+1.  **分析文本内容**：该文本是关于任命一名人员（马六十三）担任职位（财务分析经理）的陈述。
+2.  **拆解逻辑成分**：
+    *   “经财务部推荐”：说明推荐关系，逻辑通顺。
+    *   “聘任llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 309.6 t/s | Generation: 55.3 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpaxsy9g9k.txt
+================================================================================

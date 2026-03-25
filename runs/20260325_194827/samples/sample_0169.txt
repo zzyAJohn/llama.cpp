@@ -1,0 +1,44 @@
+================================================================================
+Sample ID   : 0169
+Timestamp   : 2026-03-25T20:08:00
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 69
+Prompt est. : 68
+Max new tok : 64
+Status      : ok
+TTFT        : 2.489516s
+TPOT        : 0.007399s
+E2E         : 3.887969s
+Output chars: 567
+Output est. : 189
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：经公司决定，聘任陶四十三为董事会秘书。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：经公司决定，聘任陶四十三为董事会秘书。
+
+[Start thinking]
+
+我需要判断这个任命证书文本是否符合中文表达逻辑。
+
+让我分析一下这个文本：
+1. 核心信息：陶四十三被聘任为董事会秘书
+2. 修饰语：经公司决定（表示是公司的决定，合理）
+
+检查逻辑：
+- 任命行为：公司决定聘任 →llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 336.2 t/s | Generation: 56.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmpfd2dbsub.txt
+================================================================================

@@ -1,0 +1,41 @@
+================================================================================
+Sample ID   : 0043
+Timestamp   : 2026-03-25T19:59:50
+Model       : models\Qwen3.5-0.8B.Q4_K_M.gguf
+Executable  : build\bin\Release\local_llm.exe
+Prompt chars: 66
+Prompt est. : 65
+Max new tok : 64
+Status      : ok
+TTFT        : 2.245282s
+TPOT        : 0.008319s
+E2E         : 3.825872s
+Output chars: 570
+Output est. : 190
+
+PROMPT
+--------------------------------------------------------------------------------
+请判断以下任命证书文本是否符合中文表达逻辑，只回答'合理'或'不合理'，不要有其他内容。
+证书文本：兹任命秦三十为华东大区销售总监。
+
+ANSWER
+--------------------------------------------------------------------------------
+证书文本：兹任命秦三十为华东大区销售总监。
+
+[Start thinking]
+
+让我分析这个任命证书文本的逻辑问题：
+
+1. 文本中的称谓："秦三十"
+   - 这是一个具体的人名，意味着这个人已经存在，具有法定身份
+   - 如果是一个职位头衔，应该使用"秦三十的华东大区销售总监"等表述，而不是直接叫"秦llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 4369 =   492 +    3091 +     786                |
+llama_memory_breakdown_print: |   - CPU_REPACK         |                  181 =   181 +       0 +       0                |
+
+
+[ Prompt: 318.9 t/s | Generation: 49.4 t/s ]
+
+CMD
+--------------------------------------------------------------------------------
+build\bin\Release\local_llm.exe --simple-io -st --no-warmup -n 64 -m models\Qwen3.5-0.8B.Q4_K_M.gguf -f C:\Users\AJohn\AppData\Local\Temp\tmp3506dwz7.txt
+================================================================================
